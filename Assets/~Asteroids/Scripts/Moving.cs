@@ -14,8 +14,6 @@ namespace Asteroids
 
         private Rigidbody2D rigid;
         // Member variables
-        public float moveSpeed; //Declaring a variable
-        public float rotateSpeed;
 
         private void Start()
         {
@@ -29,15 +27,15 @@ namespace Asteroids
             LimitVelocity();
         }
 
-        void fMovement(float yVal)
-        {
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime * yVal);
-        }
+        //void fMovement(float yVal)
+        //{
+        //    transform.Translate(Vector3.up * moveSpeed * Time.deltaTime * yVal);
+        //}
 
-        void fRotation(float xVal)
-        {
-            transform.rotation *= Quaternion.AngleAxis(rotateSpeed * xVal, Vector3.forward);
-        }
+        //void fRotation(float xVal)
+        //{
+        //    transform.rotation *= Quaternion.AngleAxis(rotateSpeed * xVal, Vector3.forward);
+        //}
         void LimitVelocity()
         {
             Vector3 vel = rigid.velocity;
@@ -56,7 +54,7 @@ namespace Asteroids
         {
             rigid.rotation += rotationSpeed * Time.deltaTime;
         }
-        void RotateRight()
+        public void RotateRight()
         {
             rigid.rotation -= rotationSpeed * Time.deltaTime;
         }

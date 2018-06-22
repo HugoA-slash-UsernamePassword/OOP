@@ -10,8 +10,8 @@ namespace Asteroids
         // Update is called once per frame
         void Update()
         {
-            float inputV = Input.GetAxis("Vertical");
-            float inputH = Input.GetAxis("Horizontal");
+            float inputV = Input.GetAxisRaw("Vertical");
+            float inputH = Input.GetAxisRaw("Horizontal");
             if (inputV > 0)
             {
                 movement.Accelerate(transform.up);

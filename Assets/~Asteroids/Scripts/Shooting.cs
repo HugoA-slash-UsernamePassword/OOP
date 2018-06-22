@@ -47,7 +47,7 @@ public class Shooting : MonoBehaviour
         GameObject clone = Instantiate(projectilePrefab);
         // Set position of clone to player
         clone.transform.rotation = transform.rotation;
-        clone.transform.Rotate(90, 0, 0);
+        clone.transform.Rotate(0, 0, 90);
         clone.transform.position = point.position;
         // Add force to projectile physics
             // Get Rigid Component
